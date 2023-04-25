@@ -13,9 +13,9 @@ int get_space(const char *ar, int *li)
 	int space = 0;
 
 	if (ar[curr_li] == 'l')
-		space = S_LONG;
+		space = LONG_SIZE;
 	else if (ar[curr_li] == 'h')
-		space = S_SHORT;
+		space = SHORT_SIZE;
 
 	if (space == 0)
 		*li = curr_li - 1;

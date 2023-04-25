@@ -10,7 +10,7 @@ void print_buffer(char buffer[], int *buff_ind);
 int _printf(const char *format, ...)
 {
 	int n, p = 0, p_chars = 0;
-	int f, w, p, z, buff = 0;
+	int f, w, prec, z, buff = 0;
 	va_list list;
 	char buffer[BUFFER_SIZE];
 
@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[n] != '%')
 		{
-			buffer[buff++] = format[i];
+			buffer[buff++] = format[n];
 			if (buff == BUFFER_SIZE)
 				print_buffer(buffer, &buff);
 			p_chars++;
@@ -33,11 +33,11 @@ int _printf(const char *format, ...)
 			print_buffer(buffer, &buff);
 			f = get_flags(format, &n);
 			w = get_width(format, &n, list);
-			p = get_precision(format, &n, list);
+			prec = get_precision(format, &n, list);
 			z = get_size(format, &n);
 			++n;
 			p = handle_print(format, &n, list, buffer,
-					f, w, p, z);
+					f, w, prec, z);
 			if (p == -1)
 				return (-1);
 			p_chars += p;
@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 	}
 	print_buffer(buffer, &buff);
 	va_end(list);
-	return (printed_chars);
+	return (p_chars);
 }
 /**
  * print_buffer - check if buffer content is exist

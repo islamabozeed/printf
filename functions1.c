@@ -31,7 +31,7 @@ int print_unsigned(va_list typ, char buff[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buff, flag, w, prec, size));
+	return (write_unsigned(0, i, buff, flag, w, prec, size));
 }
 /**
  * print_octal - Print unsigned number in octal notation
@@ -71,7 +71,7 @@ int print_octal(va_list typ, char buff[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buff, flag, w, prec, size));
+	return (write_unsigned(0, i, buff, flag, w, prec, size));
 }
 /**
  * print_hexadecimal - Print unsigned number in hexadecimal notation
@@ -121,7 +121,7 @@ int print_hexa_upper(va_list typ, char buff[],
 int print_hexa(va_list typ, char map_to[], char buff[],
 	int flag, char flag_ch, int w, int prec, int size)
 {
-	int i = BUFF_SIZE - 2;
+	int i = BUFFER_SIZE - 2;
 	unsigned long int num = va_arg(typ, unsigned long int);
 	unsigned long int init_num = num;
 
@@ -148,6 +148,6 @@ int print_hexa(va_list typ, char map_to[], char buff[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buff, flag, w, prec, size));
+	return (write_unsigned(0, i, buff, flag, w, prec, size));
 }
 
