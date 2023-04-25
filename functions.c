@@ -19,7 +19,7 @@ int chr(va_list typ, char buff[],
 }
 
 /**
- * p - this function prints ping
+ * p - this function prints string
  * @typ: arg
  * @buff: array
  * @flg:  Evaluates effective flg
@@ -105,7 +105,7 @@ int percent(va_list typ, char buff[],
  * @size: size
  * Return: Always 0
  */
-int intger(va_list typ, char buff[],
+int integer(va_list typ, char buff[],
 		int flg, int wd, int prc, int size)
 {
 	int i = BUFFER_SIZE - 2;
