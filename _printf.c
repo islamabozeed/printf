@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int n, p = 0, p_chars = 0;
 	int f, w, p, z, buff = 0;
 	va_list list;
-	char buffer[BUFF_SIZE];
+	char buffer[BUFFER_SIZE];
 
 	if (format == NULL)
 		return (-1);
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		if (format[n] != '%')
 		{
 			buffer[buff++] = format[i];
-			if (buff == BUFF_SIZE)
+			if (buff == BUFFER_SIZE)
 				print_buffer(buffer, &buff);
 			p_chars++;
 		}

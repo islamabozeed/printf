@@ -11,8 +11,6 @@
 - [ALX - Group Projects](https://intranet.alxswe.com/)
 - [Geeksforgeeks (fig 1-1)](www.geeksforgeeks.com)
 - [Hackerearth (fig 1-2)](www.hackerearth.com)
-- [Tenouk (fig 1-3)](www.tenouk.com)
-
 ---
 ## Requirements
 1. Linux Editor : vi, vim, emacs
@@ -39,9 +37,6 @@
 > figure(1-2)
 
 
->>![Simplify-printf-function.png](https://www.tenouk.com/clabworksheet/labworksheet8_files/cifelseswitchcase072.png)
-
-> figure(1-3)
 ---
 **Copy Right:** All right reserved, we done much effort to make the project with this way , if you copy this you must ask us first.
 
