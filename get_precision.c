@@ -8,7 +8,7 @@
  *
  * Return: Always 0
  */
-int prec(const char *format, int *n, va_list list)
+int get_prec(const char *format, int *n, va_list list)
 {
 	int c_i = *n + 1;
 	int prec = -1;
