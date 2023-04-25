@@ -57,12 +57,12 @@ int handle_write_char(char c, char buffer[],
 int write_number(int is_negative, int ind, char buffer[],
 		int flags, int width, int precision, int size)
 {
-	int length = BUFF_SIZE - ind - 1;
+	int length = BUFFER_SIZE - ind - 1;
 	char padd = ' ', extra_ch = 0;
 
 	UNUSED(size);
 
-	if ((flags & F_ZERO) && !(flags & F_MINUS))
+	if ((flags & ZERO_FLAG) && !(flags & MINUS_FLAG))
 		padd = '0';
 	if (is_negative)
 		extra_ch = '-';
@@ -150,7 +150,7 @@ int write_unsigned(int is_negative, int ind,
 		int flags, int width, int precision, int size)
 {
 
-	int length = BUFF_SIZE - ind - 1, i = 0;
+	int length = BUFFER_SIZE - ind - 1, i = 0;
 	char padd = ' ';
 
 	UNUSED(is_negative);
